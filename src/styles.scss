@@ -1,1 +1,33 @@
-/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Estilos personalizados que complementan Tailwind */
+body {
+  @apply bg-gray-50 text-gray-900;
+}
+
+/* Animaciones personalizadas */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Estilos para componentes de Material que complementan Tailwind */
+::ng-deep .mat-mdc-tab-group {
+  @apply mb-4;
+}
+
+::ng-deep .mat-mdc-tab {
+  @apply font-medium;
+}
